@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4CF4780EA8AFA066AD7A5A26 /* Pods_TechMuzzJsonParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8388FB7C501AD3884ECE92 /* Pods_TechMuzzJsonParser.framework */; };
+		7EB1A8BF1F2E7B1600CC2223 /* AudioVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB1A8BE1F2E7B1600CC2223 /* AudioVC.swift */; };
 		7EC378D91F2BD30200BC01E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC378D81F2BD30200BC01E2 /* AppDelegate.swift */; };
 		7EC378DB1F2BD30200BC01E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC378DA1F2BD30200BC01E2 /* ViewController.swift */; };
 		7EC378DE1F2BD30200BC01E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EC378DC1F2BD30200BC01E2 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 		2638A79CE81C51DD2A1DE8E6 /* Pods_TechMuzzJsonParserTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TechMuzzJsonParserTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26D9100704BC4CEAFF86F492 /* Pods-TechMuzzJsonParserUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechMuzzJsonParserUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TechMuzzJsonParserUITests/Pods-TechMuzzJsonParserUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7A76781430ED0A07C7A2CD84 /* Pods-TechMuzzJsonParser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechMuzzJsonParser.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TechMuzzJsonParser/Pods-TechMuzzJsonParser.debug.xcconfig"; sourceTree = "<group>"; };
+		7EB1A8BE1F2E7B1600CC2223 /* AudioVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioVC.swift; sourceTree = "<group>"; };
 		7EC378D51F2BD30200BC01E2 /* TechMuzzJsonParser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechMuzzJsonParser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC378D81F2BD30200BC01E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EC378DA1F2BD30200BC01E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				7EC378D81F2BD30200BC01E2 /* AppDelegate.swift */,
 				7EC378DA1F2BD30200BC01E2 /* ViewController.swift */,
 				7EC378DC1F2BD30200BC01E2 /* Main.storyboard */,
+				7EB1A8BE1F2E7B1600CC2223 /* AudioVC.swift */,
 				7EC378E21F2BD30200BC01E2 /* Assets.xcassets */,
 				7EC378E41F2BD30200BC01E2 /* LaunchScreen.storyboard */,
 				7EC378E71F2BD30200BC01E2 /* Info.plist */,
@@ -452,6 +455,7 @@
 				7EC378DB1F2BD30200BC01E2 /* ViewController.swift in Sources */,
 				7EC378E11F2BD30200BC01E2 /* TechMuzzJsonParser.xcdatamodeld in Sources */,
 				7EC378D91F2BD30200BC01E2 /* AppDelegate.swift in Sources */,
+				7EB1A8BF1F2E7B1600CC2223 /* AudioVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -702,6 +706,7 @@
 				7EC379021F2BD30300BC01E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7EC379031F2BD30300BC01E2 /* Build configuration list for PBXNativeTarget "TechMuzzJsonParserTests" */ = {
 			isa = XCConfigurationList;
@@ -710,6 +715,7 @@
 				7EC379051F2BD30300BC01E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7EC379061F2BD30300BC01E2 /* Build configuration list for PBXNativeTarget "TechMuzzJsonParserUITests" */ = {
 			isa = XCConfigurationList;
@@ -718,6 +724,7 @@
 				7EC379081F2BD30300BC01E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
