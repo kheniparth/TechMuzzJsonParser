@@ -12,4 +12,9 @@ TechMuzzJsonParser
 
 ## Screenshots
 
-![Final App Screenshot](/screenshots/final.png?raw=true "Final App Screenshot")
+
+![Final App Screenshot](/screenshots/final.png?raw=true "Simple table view")
+
+![Final App Screenshot](/screenshots/final1.png?raw=true "Table cells with thumbnails")
+
+![Final App Screenshot](/screenshots/final2.png?raw=true "Track detail view")
