@@ -18,3 +18,5 @@ TechMuzzJsonParser
 ![Final App Screenshot](/screenshots/final1.png?raw=true "Table cells with thumbnails")
 
 ![Final App Screenshot](/screenshots/final2.png?raw=true "Track detail view")
+
+![Final App Screenshot](/screenshots/final2.png?raw=true "Audio Player button")
