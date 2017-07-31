@@ -18,16 +18,25 @@ struct Post {
     let previewUrl : String!
 }
 
-class TableViewController: UITableViewController {
-    
+class TableViewController: UITableViewController, UISearchBarDelegate {
+        
     var posts = [Post]()
     var searchUrl = "https://api.spotify.com/v1/search?q=Imagine+Dragons&type=track"
     let headers = [
-        "Authorization": "Bearer BQBNmIhnTrdid89TX4bZD0IVzcyk5IqDDYyisxp01J3Yvci8ZDbULQI9ljR_Lp2vD6_UArYTAk5ssswuBwn7Qt54Qz0Wny7ZEg1cHLjF2zM9UjCQ57k9HZ0wbG1srDzEHjB1uIelvgbeMALNUxBMFjVoq2xQf6SY1lxuLigiCoyF1i8Dky02V5T60N_udoCE_TPgixgEb2UND4lYtLBOWei-DkpD6JbZS4bRUKEWYij8zreWJEvDfmNxiKQC0xtgAtu8jxPWMXfZma3Gxd5a1TDi-3LPShiA6m0XOjQJ3Itu2LC6XyZdvIjkbSwVqWfbg3SeccXrdr4cCbWykh87wg",
+        "Authorization": "Bearer BQCzZMUotB9oYP6orcmeje79ly6ql1P6UOuM5oIHtiMPqe4lfRR96wbiU57ASbyPzZlwQ2sItzCZtHwvj5XDi7aebPRUhRZk0XS_HHEFWxkKAacFYAPfE3RfnxKxqrFISCchESIka_Ia0gZKsLT_HppltHI94qZNCn5Hh4B4nwaqO8H9lr6vHuGWjFmAUfPU-DYKRonnPbV-xJOkarG28BKh46Sdo_cOzvi1yDyaNXT3oRXX5NtErN3Ot-VXK9OvkfWzJGnOviCb508yxYFCTAwb7WFLwxwWiGeWvo341ejEFG8h8NiH2CWcKxLsbZjKeZVDgVInfIm-9iqLRgz9ZQ",
         "Accept": "application/json"
     ]
 
+    @IBOutlet var searchBar: UISearchBar!
     typealias JSONStandard = [String: AnyObject]
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let keywords = searchBar.text
+        let finalKeywords = keywords?.replacingOccurrences(of: " ", with: "+")
+        searchUrl = "https://api.spotify.com/v1/search?q=\(finalKeywords!)&type=track"
+        callAlamo(url: searchUrl)
+        self.view.endEditing(true)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +47,8 @@ class TableViewController: UITableViewController {
     func callAlamo(url: String) {
         Alamofire.request(url, headers: headers).responseJSON(completionHandler: {
             response in
+            self.posts.removeAll()
+            self.tableView.reloadData()
             self.parseData(JSONData: response.data!)
         })
     }
