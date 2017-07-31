@@ -20,3 +20,5 @@ TechMuzzJsonParser
 ![Final App Screenshot](/screenshots/final2.png?raw=true "Track detail view")
 
 ![Final App Screenshot](/screenshots/final3.png?raw=true "Audio Player button")
+
+![Final App Screenshot](/screenshots/final4.png?raw=true "Search bar")
