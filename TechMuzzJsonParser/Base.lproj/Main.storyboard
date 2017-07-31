@@ -30,7 +30,6 @@
         <!--Table View Controller-->
         <scene sceneID="hOr-dl-K36">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DJz-Uf-f9H" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="P9y-gP-SO7" customClass="TableViewController" customModule="TechMuzzJsonParser" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="ceM-UA-lZG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -41,7 +40,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WbV-oM-gLv" id="P6A-Tr-Wli">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zrc-eW-ScS">
@@ -78,6 +77,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="LlH-xO-TpV"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DJz-Uf-f9H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-143.19999999999999" y="204.64767616191907"/>
         </scene>
@@ -117,6 +117,14 @@
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FIE-5n-Sqz">
+                                            <rect key="frame" x="164" y="473" width="46" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button"/>
+                                            <connections>
+                                                <action selector="playPause:" destination="hMi-gp-f15" eventType="touchUpInside" id="Dks-rB-bSk"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="sYw-RE-9S9" secondAttribute="trailing" constant="68" id="IHE-DF-r5e"/>
@@ -145,6 +153,7 @@
                     <connections>
                         <outlet property="background" destination="Yw3-T0-bnJ" id="cba-qX-XPr"/>
                         <outlet property="mainImageView" destination="VgS-cO-ddG" id="TFK-JL-KDl"/>
+                        <outlet property="playPauseButton" destination="FIE-5n-Sqz" id="O4K-qM-Ybu"/>
                         <outlet property="songTitle" destination="sYw-RE-9S9" id="5vX-EY-PCN"/>
                     </connections>
                 </viewController>

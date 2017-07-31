@@ -8,10 +8,14 @@
 
 import UIKit
 import Alamofire
+import AVFoundation
+
+var player = AVAudioPlayer()
 
 struct Post {
     let mainImage : UIImage!
     let name : String!
+    let previewUrl : String!
 }
 
 class TableViewController: UITableViewController {
@@ -46,6 +50,7 @@ class TableViewController: UITableViewController {
                     for i in 0..<items.count {
                         let item = items[i]
                         let name = item["name"] as! String
+                        let previewUrl = item["preview_url"] as? String == nil ? "" : item["preview_url"] as! String
                         
                         if let album = item["album"] as? JSONStandard {
                             if let images = album["images"] as? [JSONStandard] {
@@ -55,7 +60,7 @@ class TableViewController: UITableViewController {
                                 
                                 let mainImage = UIImage(data: mainImageData as! Data)
                                 
-                                posts.append(Post.init(mainImage: mainImage, name: name))
+                                posts.append(Post.init(mainImage: mainImage, name: name, previewUrl: previewUrl))
                                 self.tableView.reloadData()
                             }
                         }
@@ -87,6 +92,7 @@ class TableViewController: UITableViewController {
         
         vc.image = posts[indexPath!].mainImage
         vc.mainSongTitle = posts[indexPath!].name
+        vc.previewUrl = posts[indexPath!].previewUrl
     }
 
     override func didReceiveMemoryWarning() {
